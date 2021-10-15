@@ -48,17 +48,17 @@ const alumnos = [
 
 let aprobados = 0,
   desaprobados = 0,
-  promedioApro = 0,
-  promedioDesapro = 0;
+  NotasApro = 0,
+  NotasDesapro = 0;
 
 alumnos.forEach((alumno, i) => {
   const { nota, carrera, nombre } = alumno;
   if (nota >= 13) {
     aprobados++;
-    promedioApro += nota;
+    NotasApro += nota;
   } else {
     desaprobados++;
-    promedioDesapro += nota;
+    NotasDesapro += nota;
   }
 
   if (i % 2 === 0) {
@@ -67,8 +67,8 @@ alumnos.forEach((alumno, i) => {
 });
 
 console.log(`Aprobados: ${aprobados} - Desaprobados ${desaprobados}`);
-console.log(promedioApro / aprobados);
-console.log(promedioDesapro / desaprobados);
+console.log(`Promedio aprobados: ${NotasApro / aprobados}`);
+console.log(`Promedio desaprobados: ${NotasDesapro / desaprobados}`);
 
 console.log(alumnos.filter((alumno) => alumno.nota < 13));
 console.log(alumnos.map((alumno) => (alumno.nota * 3) / 2));
