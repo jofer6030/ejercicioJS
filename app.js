@@ -69,6 +69,9 @@ alumnos.forEach((alumno, i) => {
 console.log(`Aprobados: ${aprobados} - Desaprobados ${desaprobados}`);
 console.log(`Promedio aprobados: ${NotasApro / aprobados}`);
 console.log(`Promedio desaprobados: ${NotasDesapro / desaprobados}`);
+console.log(
+  `Promedio total: ${(NotasDesapro + NotasApro) / (desaprobados + aprobados)}`
+);
 
 console.log(alumnos.filter((alumno) => alumno.nota < 13));
 console.log(alumnos.map((alumno) => (alumno.nota * 3) / 2));
